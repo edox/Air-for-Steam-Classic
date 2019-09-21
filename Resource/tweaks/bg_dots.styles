@@ -1,0 +1,23 @@
+"resource/options/bg_dots.styles"
+{
+	styles
+	{
+		CSteamRootDialog
+		{
+			bgcolor=AirNormal
+			render_bg
+			{
+				0="image_tiled( x0, y0 + 36, x1, y1 - 30, graphics/bg_dots )"
+			}
+		}
+		
+		CGamesPage_Mini 
+		{			
+			bgcolor=AirNormal
+			render_bg
+			{				
+				0="image_tiled( x0, y0 + 36, x1, y1 - 30, graphics/bg_dots )"
+			}
+		}
+	}
+}

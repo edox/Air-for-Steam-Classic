@@ -1,0 +1,40 @@
+"resource/layout/subpaneloptionsdownloads.layout"
+{
+	layout
+	{
+		region { name="box" width=440 height=max y=0 x=0 }
+
+		place { control="LibrariesLabel"							region=box dir=down }
+		place { control="ManageInstalledApps"						region=box dir=down width=280 height=24 start=LibrariesLabel margin-top=10 }
+		place { control="ManageInstalledappsLabel"					region=box dir=down width=max start=ManageInstalledApps margin-top=10 }
+
+		place { control="Divider1"									region=box dir=down width=max start=ManageInstalledappsLabel margin-top=18 }
+
+		place { control="RegionLabel"								region=box dir=down start=Divider1 margin-top=15 }
+		place { control="DownloadRegionCombo"						region=box dir=down width=280 height=24 start=RegionLabel dir=down margin-top=10 }
+		place { control="RegionInfoLabel"							region=box dir=down width=max start=DownloadRegionCombo margin-top=10 }
+
+		place { control="Divider2"									region=box dir=down width=max start=RegionInfoLabel margin-top=18 }
+
+		place { control="RestrictionsLabel"						region=box dir=down start=Divider2 margin-top=15 }
+		place { control="ThrottleRates"							region=box dir=down width=280 height=24 start=RestrictionsLabel margin-top=10 }
+
+		place { control="AllowDownloadsDuringGameplayCheckbox"		region=box dir=down start=ThrottleRates margin-top=20 }
+		place { control="ThrottleDownloadsWhileStreamingCheckbox"			region=box dir=down start=AllowDownloadsDuringGameplayCheckbox margin-top=-2 }
+		place { control="DownloadRatesInBitsCheckbox"			region=box dir=down start=ThrottleDownloadsWhileStreamingCheckbox margin-top=-2 }
+		place { control="AutoUpdateTimeRestrictCheckbox"			region=box dir=down start=DownloadRatesInBitsCheckbox margin-top=-2 }
+
+		place { control="AutoUpdateTimeRestrictStartLabel"			region=box dir=down start=AutoUpdateTimeRestrictCheckbox margin-top=10 }
+		place { control="AutoUpdateTimeRestrictStart"				region=box dir=down width=135 height=24 start=AutoUpdateTimeRestrictStartLabel margin-top=5 }
+
+		place { control="AutoUpdateTimeRestrictEndLabel"			region=box dir=down start=AutoUpdateTimeRestrictCheckbox margin-top=10 x=145 }
+		place { control="AutoUpdateTimeRestrictEnd"				region=box dir=down width=135 height=24 start=AutoUpdateTimeRestrictEndLabel margin-top=5 }
+
+		place { control="Divider3"									region=box dir=down width=max start=AutoUpdateTimeRestrictStart margin-top=18 }
+
+		place { control="FlushDownloadConfigLabel"						region=box dir=down start=Divider3 margin-top=21 }
+		place { control="FlushDownloadConfig"							region=box dir=down width=280 height=24 start=FlushDownloadConfigLabel margin-top=10 }
+
+		place { control="ThrottleRatesLabel,AllowDownloadsDuringGameplayInfo,ThrottleDownloadsWhileStreamingInfo" height=0 width=0 }
+	}
+}

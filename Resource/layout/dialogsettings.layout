@@ -1,0 +1,7 @@
+"resource/layout/dialogsettings.layout"
+{		
+	layout
+	{
+		place { control="DialogSettings" y=0 height=max width=max }
+	}
+}

@@ -1,0 +1,59 @@
+"resource/layout/gamespage_details_subheader.layout"
+{
+	colors
+	{
+		GameDetailsSubHeader.HorizontalSpacing=10
+		GameDetailsSubHeader.VerticalMargin=40
+	}
+
+	styles
+	{
+		CDetailsGameSubHeaderPanel
+		{
+			bgcolor=none
+		}
+
+		ClientListButton
+		{
+			image=graphics/icon_arrow_default_small
+			padding-left=6
+			padding-right=10
+			inset-top=2
+		}
+		
+		ClientListButton:hover
+		{
+			image=graphics/icon_arrow_hover_small
+			padding-left=6
+			padding-right=10
+			inset-top=2
+		}	
+	}
+
+	layout
+	{
+		// Y offset here should match the vertical padding value above in the colors section
+		region { name="header" y=0 x=0 width=max height=max }
+
+		place { 
+			control=launchbutton
+			region=header
+			align=top-center
+			y=10
+		}
+		place { 
+			control=clientlist
+			start=launchbutton
+			region=header
+			dir=right
+		}
+		place { 
+			control=subheaderlabels
+			start=launchbutton
+			region=header
+			dir=down
+			align=top-center
+			y=10
+		}
+	}
+}

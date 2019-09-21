@@ -1,0 +1,26 @@
+"resource/layout/overlay_communityhubpanel.layout"
+{
+	styles
+	{
+		button
+		{
+			textcolor=AirOverlayText
+			font-style=uppercase
+			render_bg { }
+			padding-left=2
+		}
+
+		button:hover
+		{
+			textcolor=white
+		}
+	}
+	
+	layout
+	{
+		place { control=ViewCommunityHub align=top-center }
+
+		region { name=hidden height=0 width=0 }
+		place { control="TitleText,NumContributionsText" region=hidden }
+	}
+}

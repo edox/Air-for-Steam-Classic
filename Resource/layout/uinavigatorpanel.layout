@@ -1,0 +1,179 @@
+"resource/layout/uinavigatorpanel.layout"
+{
+	styles
+	{
+		headertextlarge
+		{
+		}
+
+		zoomslider
+		{
+			inset-top=-2
+			textcolor=AirBlock3
+			render_bg
+			{
+				0="fill( x0, y0 + 3, x1, y1 - 3, AirBlock2 )"
+			}
+		}
+
+		zoomslider:focus
+		{
+			textcolor=AirBlock3
+			render_bg
+			{
+				0="fill( x0, y0 + 3, x1, y1 - 3, AirBlock3 )"
+			}
+		}
+
+		LibrarySeparator
+		{
+			textcolor=LabelDisabled
+		}
+
+		LibraryShow { }
+
+		NavLabel { }
+
+		NavLabelView { }
+
+		NavLabelZoom { }
+
+		Panel_transparent
+		{
+			bgcolor=none
+		}
+
+		WebPanelStyle { }
+
+		TextEntryURL
+		{
+			textcolor=labeldisabled
+		}
+
+		CUINavButton
+		{
+			padding-left=5
+			padding-right=5
+		}
+
+		CUINavButton:hover
+		{
+			textcolor="labelfocus"
+		}
+
+		CUINavButton:selected
+		{
+			textcolor="TextHover"
+		}
+
+		CUINavigatorPanel
+		{
+			bgcolor="none"
+		}
+
+		LabelEVCert
+		{
+		}
+
+		URLStatusImage
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/lock"
+		}
+
+		URLBarSecure
+		{
+			textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+			textcolor="html.insecureurl"
+		}
+
+		downarrow
+		{
+			image="graphics/icon_arrow_default_small"
+		}
+
+		downarrow:hover
+		{
+			image="graphics/icon_arrow_hover_small"
+		}
+
+		MusicPlayerIcon {
+			image="graphics/icons/music_player"
+		}
+
+		MusicPlayerIcon:hover {
+			image="graphics/icons/music_player_hover"
+		}
+
+		NavLabel2 {
+			image=graphics/icon_collapse
+		}
+
+		CGameFilterMenuButton {
+			render {
+				0="fill( x0, y0, x1, y1, AirNormal )"
+				0="image( x0, y0 + 12, x1, y1, graphics/caret_down )"
+			}
+		}
+
+		WebPanelStyle {
+			inset="0 0 0 0"
+		}
+
+		BroadcastPanelMinimized {
+			inset="0 0 0 0"
+		}
+	}
+
+	layout
+	{
+		//Nav
+		region { name="nav" y=0 height=36 width=max }
+		place { control="back,forward" region=nav x=36 y=1 height=35 width=30 spacing=18 }
+		place { control="label_store,label_library" region=nav start=forward y=-1 x=5 height=35 spacing=8 }
+		place { control="library_filters" region=nav start=label_library height=35 width=15 x=0 y=0 }
+		place { control="label_community,label_me,label_news,label_console" region=nav start=library_filters y=-1 x=5 height=35 spacing=8 }
+
+		//Body
+		region { name="body" y=36 height=max width=max margin-bottom=30 }
+		place { control=emailreminderbar,phonereminderbar margin-top=36 width=max height=55 dir=down }
+
+		// content pages - these are all pushed down by the email reminder bar (above) if it's visible
+		place { control=WebPanel 							width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=BroadcastPage					width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+
+		place { control=GamesPage_Details 		width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=GamesPage_List 				width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=GamesPage_Grid 				width=max height=max start=phonereminderbar dir=down margin-bottom=39 }
+		place { control=ScreenshotsPage 			width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=DownloadsPage 				width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=MediaPage 						width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=MusicPage_Details 		width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=ToolsPage 						width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=ConsolePage 					width=max height=max start=phonereminderbar dir=down margin-bottom=33 }
+		place { control=NewLibraryPage				width=max height=max start=phonereminderbar dir=down margin-bottom=30 }
+		place { control=BroadcastPageMin			width=300 height=168 margin-right=26 margin-bottom=56 dir=down align=bottom-right }
+		place { control=BroadcastPageMinHoriz	width=300 height=168 margin-right=26 margin-bottom=56 dir=down align=bottom-right }
+
+		//Bottom
+		region { name="bottom" align=bottom width=max height=26 }
+		place { control="library_zoom" align=bottom y=-38 height=8 width=max margin-right=16 margin-left=16 }
+
+		place { control="library_search" region=bottom y=0 x=7 height=24 width=220 align=left }
+		place { control="PageLoadThrobber" region=bottom x=5 y=3 width=20 height=20 }
+		place { control="URLBar" region=bottom x=26 y=0 height=24 width=max margin-right=256 }
+
+		place { control="library_music_menu" align=left x=256 y=35 height=21 width=20 }
+		place { control="library_music_player_icon" align=right y=49 height=16 width=16 margin-right=24 }
+
+		region { name=hidden height=0 width=0 }
+		place { control="URLStatusImage,label_search_icon" region=hidden }
+		place { control="library_music_add_button,label_library_zoom,home,refresh,stop,EVCert,subnavgroup_library,label_zoom_separator,label_library_view,library_filters_details,library_filters_list,library_filters_grid,label_community_new,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_friends,label_community_profile,label_community_marketplace,label_community_groups,BetaFlagBigPicture,fullscreen" region=hidden }
+	}
+}

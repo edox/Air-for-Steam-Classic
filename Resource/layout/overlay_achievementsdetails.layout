@@ -1,0 +1,26 @@
+"resource/layout/overlay_achievementsdetails.layout"
+{
+	styles
+	{
+		button
+		{
+			textcolor=AirOverlayText
+			font-style=uppercase
+			render_bg { }
+			padding-left=2
+		}
+
+		button:hover
+		{
+			textcolor=white
+		}
+	}
+	
+	layout
+	{
+		place { control=ViewAchievementsButton align=top-center }
+
+		region { name=hidden height=0 width=0 }
+		place { control="*achievement,TitleText,ProgressTextEarned,progressbackground,progressbarimage" region=hidden }		
+	}
+}

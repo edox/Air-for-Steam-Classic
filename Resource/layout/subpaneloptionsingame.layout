@@ -1,0 +1,35 @@
+"resource/layout/subpaneloptionsingame.layout"
+{
+	layout
+	{
+		region { name="box" width=440 height=max y=0 x=0 }
+
+		place { controls=DescriptionLabel					region=box width=max }
+		place { controls=EnableOverlayCheck,EnableSCTenFootOverlayCheck,EnableVRDesktopGameTheaterCheck					region=box dir=down width=max start=DescriptionLabel margin-top=10 }
+
+		place { controls=HotKeySelectorLabel				region=box dir=down start=EnableVRDesktopGameTheaterCheck margin-top=10 }
+		place { controls=HotKeySelector						region=box dir=down width=200 height=24 start=HotKeySelectorLabel margin-top=10 }
+
+		place { control=ShowIngameFPSLabel									dir=down x=220 start=EnableVRDesktopGameTheaterCheck y=10 }
+		place { control=ShowIngameFPSCombo									dir=down width=200 start=ShowIngameFPSLabel y=10 }
+
+		place { control=ShowIngameFPSContrastCheck					dir=down start=ShowIngameFPSCombo y=20 }
+
+		place { control="Divider1"							region=box dir=down width=max start=ShowIngameFPSContrastCheck x=-220 margin-top=21 }
+
+		place { controls=ScreenshotActionLabel				region=box dir=down start=Divider1 margin-top=15 }
+		place { controls=ScreenshotNotifyCheck				region=box dir=down start=ScreenshotActionLabel margin-top=5 }
+		place { controls=ScreenshotPlaySoundCheck			region=box dir=down start=ScreenshotNotifyCheck margin-top=-2 }
+		place { controls=ScreenshotSaveUncompressedCheck	region=box dir=down start=ScreenshotPlaySoundCheck margin-top=-2 }
+
+		place { controls=SetScreenshotFolderButton			region=box dir=down width=200 height=24 start=ScreenshotSaveUncompressedCheck margin-top=10 }
+
+		place { controls=ScreenshotLabel					region=box dir=down dir=down start=Divider1 margin-top=15 x=220 }
+		place { controls=ScreenshotHotKeySelector			region=box dir=down width=200 height=24 start=ScreenshotLabel margin-top=10 }
+
+		place { controls="PingRateLabel"					region=box dir=down width=max start=SetScreenshotFolderButton margin-top=38 }
+		place { controls="PingRateCombo"					region=box dir=down width=280 height=24 start=PingRateLabel margin-top=10 }
+
+		place { control="TitleLabel,PingRateInfo" height=0 width=0 }
+	}
+}

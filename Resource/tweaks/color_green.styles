@@ -1,0 +1,9 @@
+"resource/options/color_green.styles"
+{
+	colors
+	{
+		Focus="0 138 23 255"
+		Focus2="28 175 39 255" //+28 +37 +36
+		Focus3="48 138 63 150" //-35% saturation
+	}
+}

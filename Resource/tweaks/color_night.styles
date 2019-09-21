@@ -1,0 +1,9 @@
+"resource/options/color_night.styles"
+{
+	colors
+	{
+		Focus="33 33 33 255"
+		Focus2="61 70 69 255" //+28 +37 +36
+		Focus3="33 33 33 150" //-35% saturation
+	}
+}

@@ -1,0 +1,21 @@
+"resource/options/bg_none.styles"
+{
+	styles
+	{
+		CSteamRootDialog
+		{
+			bgcolor=AirNormal
+			render_bg
+			{
+			}
+		}
+		
+		CGamesPage_Mini 
+		{			
+			bgcolor=AirNormal
+			render_bg
+			{				
+			}
+		}
+	}
+}

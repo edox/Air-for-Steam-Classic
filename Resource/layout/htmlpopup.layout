@@ -1,0 +1,45 @@
+"resource/layout/htmlpopup.layout"
+{
+	styles
+	{
+		HTML
+		{
+			inset="0 0 0 0"
+		}
+
+		TextEntryURL
+		{
+			textcolor=labeldisabled
+		}
+
+		URLBarSecure
+		{
+			textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+			textcolor="html.insecureurl"
+		}
+	}
+	
+	layout
+	{		
+		place { control="frame_minimize,frame_close" height=34 width=22 align=right margin-top=1 margin-right=8 spacing=0 }
+
+		region { name="nav" y=0 height=36 width=max }
+		place { control="BackButton,ForwardButton" region=nav x=8 y=1 height=35 width=30 spacing=18 }
+
+		region { name="body" y=36 height=max width=max margin-bottom=26 }
+		place { control="htmlpopupchild"  region=body width=max height=max margin-right=0 }
+	
+		region { name="bottom" align=bottom width=max height=26 }
+		place { control="PageLoadThrobber" region=bottom x=5 y=3 width=20 height=20 }
+		place { control="URLBar" region=bottom x=26 y=3 height=20 width=max margin-right=8 }
+
+		//Hidden Items
+		region { name=hidden height=0 width=0 }
+		place { control="ReloadButton,StopButton,EVCert,StatusText,URLStatusImage" region=hidden }
+	}
+}
+

@@ -1,0 +1,69 @@
+"steam/cached/overlaywebbrowser.layout"
+{
+	styles
+	{
+		COverlayWebBrowser
+		{
+			bgcolor=none
+			render_bg {
+				0="fill( x0, y0 + 2, x1, y0 + 43, AirBlock )"
+				0="fill( x0, y0 + 43, x1, y0 + 44, AirDivider )"
+			}
+		}
+		   
+		ReloadButton
+		{
+		  inset="-5 -2 0 0"
+		}
+
+		StopButton
+		{
+		  inset="-5 -2 0 0"
+		}
+
+		TextEntryURL
+		{
+			textcolor="text2"
+			font-size=22
+			selectedtextcolor="TextEntrySelected"
+			selectedbgcolor="AirDark100"
+			shadowtextcolor="Text"	// this is the cursor color
+			inset-top=-2
+		}
+		
+		TextEntryURL:Hover
+		{
+			textcolor="text2"		
+		}
+
+		URLBarSecure
+		{
+			textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+			textcolor="html.insecureurl"
+		}
+
+		HTML
+		{
+			inset="0 0 0 0"
+		}
+	}
+	
+	layout
+	{
+		place { control="frame_close" height=34 width=22 align=right margin-top=1 margin-right=8 spacing=0 }
+		
+		region { name="nav" height=42 width=max align=top }
+		place { control="BackButton,ForwardButton,ReloadButton,StopButton,URLBar" region=nav x=8 height=38 width=max spacing=26 margin-top=4 margin-right=56 }
+		place { control="PageLoadThrobber" region=nav align=right margin-top=11 margin-right=16 width=20 height=20 }	
+		
+		region { name="body" y=44 height=max width=max }
+		place { control="HTMLField" region=body width=max height=max }
+
+		region { name=hidden height=0 width=0 }
+		place { control="HomeButton,StatusText,URLStatusImage,EVCert" region=hidden }
+	}
+}

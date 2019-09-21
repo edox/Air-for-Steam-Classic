@@ -1,0 +1,19 @@
+"resource/layout/steamrootdialog_mediapage.layout"
+{
+	styles
+	{
+		RichText //for emptylist
+		{
+			textcolor=labeldisabled
+			selectedtextcolor=labeldisabled
+		}
+	}
+
+	layout
+	{
+		// content pages
+		place { control=GamesList 		width=max height=max margin=0 }
+
+	}
+
+}

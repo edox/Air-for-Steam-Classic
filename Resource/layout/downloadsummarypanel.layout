@@ -1,0 +1,86 @@
+"resource/layout/downloadsummarypanel.layout"
+{
+	styles {
+
+		CDownloadSummaryPanel {
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirBlock )"
+			}
+		}
+
+		NetGraphPanel {
+			textcolor=focus // download graph bars color
+			bgcolor=none
+		}
+
+		DiscGraphPanel {
+			textcolor=white // disk usage color
+			bgcolor=none
+		}
+
+		DiskLegendPanel	{
+			render_bg {
+				0="fill( x0, y0, x1, y1, white )"
+			}
+		}
+
+		NetLegendPanel	{
+			render_bg {
+				0="fill( x0, y0, x1, y1, focus )"
+			}
+		}
+
+		infoGraphic {
+			inset="3 3 3 3"
+		}
+
+		LabelDwnld {
+			font-weight=700
+		}
+
+		container {
+			bgcolor="none"
+		}
+
+		label {
+			textcolor=label2
+		}
+
+		bigtext {
+				textcolor=label
+		}
+
+		bigtextlabel {
+				textcolor=label2
+		}
+
+		bigtextHeader {
+				textcolor=label2
+		}
+
+		bigTextNumbers {
+				textcolor=Text
+		}
+	}
+
+	layout {
+
+		region { name=global height=max width=max }
+				region { name=info region=global height=max width=max align=top }
+
+		place { control="net_graphpanel" region=global width=max height=max margin-top=50 }
+		place { control="disc_graphpanel" region=global width=max height=max margin-top=50 }
+
+		place { control="pauseresumeallbutton" region=info align=right y=8 margin-right=16 }
+
+		place { region=info control="download_rate,download_rate_value" 					y=11 spacing=8 margin-left=16 }
+		place { region=info control="peak_download_rate,peak_download_rate_value" x=16 spacing=8 start=download_rate_value }
+		place { region=info control="total_downloaded,total_downloaded_value" 		x=16 spacing=8 start=peak_download_rate_value }
+		place { region=info control="disk_status_label,disk_status_value" 				x=16 spacing=8 start=total_downloaded_value }
+
+		place { region=info control="blackout_label,blackout_value" 							y=33 spacing=8 margin-left=16  }
+		place { region=info control="throttling_label,throttling_value" 					x=16 spacing=4 start=blackout_value }
+
+		place { control=header,net_legend_panel,net_legend_label,disk_legend_panel,disk_legend_label height=0 width=0 }
+	}
+}

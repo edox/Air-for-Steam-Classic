@@ -1,0 +1,47 @@
+"resource/layout/emailreminderbar.layout"
+{
+	styles
+	{
+		CEmailReminderBar
+		{
+			render { }
+			render_bg {
+				0="fill (x0, y0, x1, y1 - 1, AirNotify )"
+				1="fill (x0, y1 - 1, x1, y1, AirDivider )"
+			}
+		}
+		
+		soft
+		{
+			textcolor=AirText170
+		}
+
+		bright
+		{
+				
+			textcolor=AirText240
+		}
+
+		CloseStyle {
+			textcolor=none
+			render_bg {
+				0="image( x0 + 3, y0 + 3, x1, y1, graphics/tiny_x_default )"
+			}	
+		}
+
+		CloseStyle:hover {
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirLight40 )"
+				1="image( x0 + 3, y0 + 3, x1, y1, graphics/tiny_x_hover )"	
+			}
+		}
+	}
+	
+	layout
+	{
+		place { control="emailreminderbarlabel,emailreminderbaremail_email,emailreminderbar_yesbutton,emailreminderbar_nobutton" y=9 x=40 margin-right=27 spacing=10 }
+		place { control="emailreminderbar_info,emailreminderbar_infolink" y=29 x=40 margin-right=27 spacing=10 }
+		
+		place { control="emailreminderbar_close" y=6 align=right width=15 height=15 margin-right=6 }
+	}
+}

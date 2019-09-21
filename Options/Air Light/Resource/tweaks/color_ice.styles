@@ -1,0 +1,9 @@
+"resource/options/color_ice.styles"
+{
+	colors
+	{
+		Focus="146 194 226 255"
+		Focus2="118 157 190 255"
+		Focus3="146 194 226 150"
+	}
+}

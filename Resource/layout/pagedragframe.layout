@@ -1,0 +1,28 @@
+"resource/layout/pagedragframe.layout"
+{
+	controls
+	{
+		DragPropertySheet { controlname="PropertySheet" }
+	}
+	
+	styles
+	{
+		PageDragFrame
+		{			
+			bgcolor="AirNormal"
+			render_bg
+			{
+				0="fill( x0 + 8, y0 + 34, x1 - 8, y0 + 36, Focus )"
+			}
+		}
+		
+		PageDragPanel
+		{
+		}
+	}
+		
+	layout
+	{
+	  place { control="DragPropertySheet" x=8 y=6 width=max height=max margin-right=8 margin-bottom=8 }
+	}
+}

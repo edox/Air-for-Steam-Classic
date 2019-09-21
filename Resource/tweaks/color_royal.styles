@@ -1,0 +1,9 @@
+"resource/options/color_royal.styles"
+{
+	colors
+	{
+		Focus="126 53 159 255"
+		Focus2="154 90 195 255" //+28 +37 +36
+		Focus3="143 108 159 150" //-35% saturation
+	}
+}

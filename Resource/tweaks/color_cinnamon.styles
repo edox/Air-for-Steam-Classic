@@ -1,0 +1,9 @@
+"resource/options/color_cinnamon.styles"
+{
+	colors
+	{
+		Focus="186 69 65 255"
+		Focus2="214 106 101 255" //+28 +37 +36
+		Focus3="186 132 130 150" //-35% saturation
+	}
+}

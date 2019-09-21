@@ -1,0 +1,29 @@
+"resource/layout/overlay_friendsdetails.layout"
+{
+	styles
+	{
+		button
+		{
+			textcolor=AirOverlayText
+			font-style=uppercase
+			render_bg { }
+			padding-left=2
+		}
+
+		button:hover
+		{
+			textcolor=white
+		}
+	}
+	
+	layout
+	{
+		region { name=friends width=146 align=left } //106 + 40
+		region { name=players width=124 align=right } //84 + 40
+		place { control=AllFriendsButton region=friends align=top-center }
+		place { control=ViewPlayersButton region=players align=top-center }
+
+		region { name=hidden height=0 width=0 }
+		place { control="TitleText,TextThisManyFriends,grid" region=hidden }
+	}
+}

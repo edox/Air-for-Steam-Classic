@@ -1,0 +1,15 @@
+"resource/options/lib_nodividers.styles"
+{
+	styles
+	{
+		"CSteamRootDialog ListPanelSectionHeader"
+		{
+			padding-bottom=5
+		}
+
+		"CGamesPage_Mini ListPanelSectionHeader"
+		{
+			padding-bottom=5
+		}
+	}
+}

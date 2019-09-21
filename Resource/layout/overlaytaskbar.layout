@@ -1,0 +1,24 @@
+"resource/layout/overlaytaskbar.layout"
+{
+	styles
+	{
+		taskbar {
+			textcolor=AirOverlayText
+			font-style=uppercase
+		}
+		taskbar:hover {
+			textcolor=white
+		}
+
+	}
+
+	layout
+	{
+		place { control=TaskbarPanel height=max width=max }
+		place { control=MusicPlayerButton,WebBrowserButton,SettingsButton region=browser align=top-center spacing=20 }
+
+		region { name=hidden height=0 width=0 }
+		place { control="ScreenshotsButton,SteamLogo" region=hidden }
+		place { control="FriendPanel,view_friends,online_friends" height=0 width=0 }
+	}
+}

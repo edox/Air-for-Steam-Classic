@@ -1,0 +1,9 @@
+"resource/options/color_bubblegum.styles"
+{
+	colors
+	{
+		Focus="172 71 133 255"
+		Focus2="200 108 169 255" //+28 +37 +36
+		Focus3="172 131 156 150" //-35% saturation
+	}
+}

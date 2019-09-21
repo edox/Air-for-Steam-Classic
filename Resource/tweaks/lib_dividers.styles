@@ -1,0 +1,23 @@
+"resource/options/lib_dividers.styles"
+{
+	styles
+	{
+		"CSteamRootDialog ListPanelSectionHeader"
+		{
+			padding-bottom=5
+			render_bg
+			{
+				0="fill( x0 - 22, y1 - 2, x1, y1, AirDivider )"
+			}
+		}
+
+		"CGamesPage_Mini ListPanelSectionHeader"
+		{
+			padding-bottom=5
+			render_bg
+			{
+				0="fill( x0 - 22, y1 - 2, x1, y1, AirDivider )"
+			}
+		}
+	}
+}

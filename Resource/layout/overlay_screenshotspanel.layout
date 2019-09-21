@@ -1,0 +1,26 @@
+"resource/layout/overlay_screenshotspanel.layout"
+{
+	styles
+	{
+		button
+		{
+			textcolor=AirOverlayText
+			font-style=uppercase
+			render_bg { }
+			padding-left=2
+		}
+
+		button:hover
+		{
+			textcolor=white
+		}
+	}
+	
+	layout
+	{
+		place { control=ViewScreenshots align=top-center }
+
+		region { name=hidden height=0 width=0 }
+		place { control="TitleText,InstructionText,DarkRegion,SS0,SS1,SS2,SetShortcut" region=hidden }
+	}
+}

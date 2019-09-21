@@ -1,0 +1,48 @@
+"resource/layout/overlaydesktop.layout"
+{
+	styles
+	{
+		topbar {
+			font-family=light
+			textcolor=white
+			font-size=150
+		}
+
+		timeStrings {
+			font-family=light
+			textcolor=white
+			font-size=32
+		}
+
+		sidemenu {
+			textcolor=AirOverlayText
+			font-style=uppercase
+		}
+
+		sidemenu:hover {
+			textcolor=white
+		}
+	}
+
+	layout
+	{
+		region { name=row1 width=max y=40 }
+		region { name=row2 width=max y=182 }
+
+		place { control=clock region=row1 align=top-center margin-left=23 }
+		place { control=SessionText region=row2 align=top-center margin-left=2 }
+
+		region { name=bottom width=max height=77 align=bottom }
+
+		place { control=FriendsDetailPanel width=270 } //106 + 84 + 40 + 40
+		place { control=ScreenshotsDetailPanel width=155 } //115 + 40
+		place { control=CommunityHubDetailPanel width=169 } //129 + 40
+		place { control=AchievementsDetailPanel width=184 } //144 + 40
+		place { control=AchievementsDetailPanel,FriendsDetailPanel,CommunityHubDetailPanel,ScreenshotsDetailPanel region=bottom align=top-center spacing=0 }
+
+		place { control=BroadcastDetailPanel align=top-center height=50 width=300 }
+
+		region { name=hidden height=0 width=0 margin-left=-9999 }
+		place { controls="TwoWeeksText,ForeverText,clocksuffix,GameHubButton,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton,GuidesButton,GuidesDetailPanel,NewsDetailPanel,CommunityDiscussionsDetailPanel,EditControllerConfig,ForceQuitButton" region=hidden }
+	}
+}

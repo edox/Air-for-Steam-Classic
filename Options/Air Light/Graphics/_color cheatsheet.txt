@@ -1,0 +1,15 @@
+Disabled: 220 220 220 255
+Normal:   160 160 160 255
+Focus:    120 120 120 255
+
+Special-
+icon_buy_hover:     239 239 239 255
+icon_install_hover: 239 239 239 255
+icon_pause_hover:   239 239 239 255
+icon_play_hover:    239 239 239 255
+
+inbox_notification: 239 239 239 255 (same as AirNormal)
+
+Checkbox:       200 200 200 255
+Checkbox_hover: 170 170 170 255
+Checkbox_dis:	210 210 210 255

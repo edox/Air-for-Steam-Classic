@@ -1,0 +1,9 @@
+"resource/options/color_padawan.styles"
+{
+	colors
+	{
+		Focus="123 77 54 255"
+		Focus2="151 114 90 255" //+28 +37 +36
+		Focus3="123 106 97 150" //-35% saturation
+	}
+}

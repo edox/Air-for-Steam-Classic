@@ -1,0 +1,41 @@
+"resource/layout/overlaydashboard.layout"
+{
+	styles
+	{
+		overlaymain {
+			render_bg {
+				0="gradient( x0, y0, x1, y1, AirDark100, AirDark50)"
+			}
+		}
+
+
+
+		OverlayURLLabel {
+			textcolor=none
+		}
+
+		OverlayURLLabel:Hover {
+			textcolor=none
+		}
+
+		bottomfade {
+			bgcolor=AirDark100
+		}
+	}
+
+	layout
+	{
+		region { name=row3 width=max align=bottom height=225 }
+
+		place { control=CloseButton y=0 align=right height=32 width=32 }
+
+
+		place { control=TaskbarPanel region=row3 align=top-center width=max height=20 }
+
+		place { control=BottomFadePanel align=bottom height=130 width=max }
+
+		place { control=PowerMeterDim align=bottom height=3 width=max margin-bottom=132 margin-left=-2 }
+
+		place { control=TopFadePanel,gamename,HotkeyLabel,HotkeyExplain height=0 width=0 }
+	}
+}

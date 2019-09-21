@@ -1,0 +1,322 @@
+"resource/options/font_segoeui.styles"
+{
+	colors
+	{
+
+	//Win
+	//____
+
+		basefont="Segoe UI"
+		semibold="Segoe UI Semibold"
+		light="Segoe UI Light"
+
+
+	//Mac
+	//____
+
+		basefont="Helvetica" [$OSX]
+	}
+
+	styles
+	{
+
+	//Standard
+	//________
+
+		Label
+		{ font-family=basefont font-size=14 }
+
+		Panel
+		{ font-family=basefont font-size=14 }
+
+		TextEntry
+		{ font-family=basefont font-size=14 }
+
+		RichText
+		{ font-family=basefont font-size=14 }
+
+		"RichText emphasis"
+		{ font-style=italic }
+
+		"RichText url"
+		{ font-style=underline }
+
+		ListPanel
+		{ font-family=basefont font-size=14 }
+
+		SectionedListPanel
+		{ font-family=basefont font-size=14 }
+
+		RadioButton
+		{ font-family=basefont font-size=14 }
+
+		CheckButton
+		{ font-family=basefont font-size=14 }
+
+		MenuItem
+		{ font-family=basefont font-size=14 }
+
+		Notification
+		{ font-family=basefont font-size=14 }
+
+		URLLabelSimple
+		{ font-family=basefont font-size=14 }
+
+		html-findbar
+		{ font-family=basefont font-size=14 }
+
+		namestyle
+		{ font-family=basefont font-size=14 }
+
+		nameInstanceStyle
+		{ font-family=basefont font-size=14 }
+
+		controlPanelLinkStyle
+		{ font-family=basefont font-size=14 }
+
+		statusStyle
+		{ font-family=basefont font-size=14 }
+
+		inviteLinkStyle
+		{ font-family=basefont font-size=14 }
+
+
+	//Standard <strong>
+	//__________________
+
+		friends_chat_bright_event
+		{ font-family=semibold font-size=14 }
+
+		friends_chat_securitylink
+		{ font-family=semibold font-size=14 }
+
+		"CGamesPage_Details RichText bold" //news item bold
+		{ font-family=semibold font-size=14 }
+
+		support_alert
+		{ font-family=semibold font-size=14 }
+
+
+	//Standard +2
+	//____________
+
+		Button
+		{ font-family=basefont font-size=16 }
+
+		ComboBox
+		{ font-family=basefont font-size=16 }
+
+		PageTab
+		{ font-family=basefont font-size=16 }
+
+		"CGamesPage_Details infolabel"
+		{ font-family=basefont font-size=16 }
+
+		"CGamesPage_Details mostrecent_label"
+		{ font-family=basefont font-size=16 }
+
+		"CGamesPage_Details mostrecent_name"
+		{ font-family=basefont font-size=16 }
+
+		"CGamesPage_Details everythinglabel"
+		{ font-family=basefont font-size=18 }
+
+		"CScreenshotManager publishcaption"
+		{ font-family=basefont font-size=16 }
+
+		sidemenu //in overlaydesktop
+		{ font-family=basefont font-size=16 }
+
+		taskbar //in overlaytaskbar
+		{ font-family=basefont font-size=18 }
+
+
+	//Standard +2 <strong>
+	//_____________________
+
+		"RichText bold"
+		{ font-family=semibold font-size=16 }
+
+		"GameColumn_BigText"
+		{ font-family=semibold font-size=16 }
+
+		tooltip_headline
+		{ font-family=semibold font-size=16 }
+
+		title_label
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details rightcolumnheadertext"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details rightcolumnheadertext-red"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details rightcolumnheadertext-green"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details rightcolumnheadertext-blue"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details headertext"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details headertext-red"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details headertext-green"
+		{ font-family=semibold font-size=16 }
+
+		"CGamesPage_Details headertext-blue"
+		{ font-family=semibold font-size=16 }
+
+		"ToolWindow status_label"
+		{ font-family=semibold font-size=16 }
+
+
+	//Light
+	//_________
+
+		TextEntryURL
+		{ font-family=light font-size=18 }
+
+		online_friends
+		{ font-family=light font-size=18 }
+
+		URLLabelSimple
+		{ font-family=light font-size=18 }
+
+		URLLabelSimple2
+		{ font-family=light font-size=18 }
+
+		ListPanelColumnHeader
+		{ font-family=light font-size=18 }
+
+		emptylisttext //search results empty
+		{ font-family=light font-size=18 }
+
+		LibrarySearch
+		{ font-family=light font-size=18 }
+
+		LibrarySearch:empty
+		{ font-family=light font-size=18 }
+
+		FriendsSearch
+		{ font-family=light font-size=18 }
+
+		FriendsSearch:empty
+		{ font-family=light font-size=18 }
+
+		"ToolWindow label" //chat statustext
+		{ font-family=light font-size=18 }
+
+		"CFriendsDialog label" //friends list offline msg
+		{ font-family=light font-size=18 }
+
+		AccountBalanceStyle
+		{ font-family=light font-size=18 textcolor=LabelDisabled } //wallet balance
+
+		bigtext
+		{ font-family=light font-size=18 }
+
+		bigtextlabel
+		{ font-family=light font-size=18 }
+
+		bigtextNonUpper
+		{ font-family=light font-size=18 }
+
+		bigtextHeader
+		{ font-family=light font-size=18 }
+
+		bigTextNumbers
+		{ font-family=light font-size=18 }
+
+		throttleLabel
+		{ font-family=light font-size=18 }
+
+		throttleValue
+		{ font-family=light font-size=18 }
+
+		"CGamesListPanel RichText" //emptylist text in games list
+		{ font-family=light font-size=18 }
+
+		GamesGridPlaceholder
+		{ font-family=light font-size=18 }
+
+		"CSteamRootDialog SectionedListPanel label" //downloads page
+		{ font-family=light font-size=18 }
+
+		"CSteamRootDialog SectionedListPanel label2" //downloads page
+		{ font-family=light font-size=18 }
+
+		ListPanelSectionHeader
+		{ font-family=light font-size=18 font-style=uppercase }
+
+
+	//Light +1
+	//_________
+
+		"CSettingsSubFriends TextEntry"
+		{ font-family=light font-size=22 }
+
+		"ProgressBox Label"
+		{ font-family=light font-size=22 }
+
+
+	//Light +2
+	//_________
+
+		CUINavButton
+		{ font-family=light font-size=24 }
+
+		gamedetails-headerlabel
+		{ font-family=light font-size=40 }
+
+		gamedetails-headerlabel-red
+		{ font-family=light font-size=40 }
+
+		gamedetails-headerlabel-green
+		{ font-family=light font-size=40 }
+
+		gamedetails-headerlabel-blue
+		{ font-family=light font-size=40 }
+
+		"CScreenshotManager NoSelectionTitle"
+		{ font-family=light font-size=26 }
+
+		"CSteamRootDialog ModuleHeading"
+		{ font-family=light font-size=26 }
+
+		"CSteamRootDialog ModuleHeading2"
+		{ font-family=light font-size=26 }
+
+
+	//Light +4
+	//_____________
+
+		TextEntryLarge //for password entry
+		{ font-family=light font-size=30 }
+
+		headertextlarge
+		{ font-family=light font-size=60 }
+
+		//Music
+
+		AlbumTitleStyle 				{ font-family=light font-size=60 textcolor=texthover }
+		ArtistStyle 						{ font-family=light font-size=40 textcolor=focus }
+		PlaylistTitleStyle 			{ font-family=light font-size=40 textcolor=focus }
+		TrackStyle 							{ font-family=basefont font-size=16 }
+		TrackStyle:hover 				{ textcolor=TextHover }
+		TracksInfoStyle 				{ textcolor=label font-style=uppercase }
+		TracksInfoLabelStyle		{ textcolor=label font-style=uppercase }
+		PositionLabelStyle 			{ textcolor=text }
+		TrackLabelStyle 				{ textcolor=text }
+		"CSteamRootDialog ActionButtonStyle" 						{ font-size=16 font-weight=700 }
+		"CSteamRootDialog AdditionalActionButtonStyle" 	{ font-size=16 }
+
+		"CMusicPlayerPanel StatusStyle"			{ font-family=light font-size=24 }
+		"CMusicPlayerPanel StatusStyleDim"	{ textcolor=Label }
+		"CMusicPlayerPanel InfoLabelStyle"	{ textcolor=Label }
+		"CMusicPlayerPanel TrackListStyle"	{ font-size=16 textcolor=Text }
+	}
+}

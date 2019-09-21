@@ -1,0 +1,9 @@
+"resource/options/color_teal.styles"
+{
+	colors
+	{
+		Focus="0 130 153 255"
+		Focus2="28 167 189 255" //+28 +37 +36
+		Focus3="53 138 153 150" //-35% saturation
+	}
+}

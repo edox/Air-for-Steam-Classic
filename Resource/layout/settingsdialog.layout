@@ -1,0 +1,44 @@
+"resource/layout/settingsdialog.layout"
+{
+	styles
+	{
+		CDialogSettings
+		{
+			minimum-width="645"
+			minimum-height="665"
+			render_bg
+			{
+				0="fill( x0, y0, x0 + 165, y1, AirRibbon )"
+			}
+		}
+
+		PropertySheet
+		{
+		}
+
+		"SettingsList"
+		{
+			font-size=18
+			font-family=basefont
+			textcolor=AirText200
+			padding-left=20
+		}
+
+		SettingsList:hover
+		{
+			textcolor=White
+		}
+	}
+	layout
+	{
+		region { name="buttons" width=max height=36 align="bottom" }
+		region { name="body" margin-left=0 margin-right=20 margin-bottom=46 margin-top=36 }
+
+		place { control="settingslist" end=sheet region=body width=165 height=max }
+		place { control="sheet" start=settingslist region=body width=440 height=max y=6 x=20 }
+		place { control="okbutton,cancelbutton" region="buttons"
+						width=92 height=25 align=right
+						margin-right=10 margin-top=0
+						margin-bottom=2 spacing=10 }
+	}
+}

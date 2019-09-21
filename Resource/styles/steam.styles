@@ -1,0 +1,2108 @@
+steam.styles
+{
+	include "resource/styles/aircolors.styles"
+
+	colors
+	{
+		DragDrop.DragFrame        "255 255 255 192"
+		DragDrop.DropFrame        "150 255 150 255"
+
+		Frame.ClientInsetX        10
+		Frame.ClientInsetY        35
+		Frame.FocusTransitionEffectTime   "0"     // time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime      "0.25"      // time it takes for a window to fade in/out on open/close
+		Frame.OnDragAlphaDelayTime      "0.15"      // time it takes after clicking the title bar of a window before the alpha multiplier kicks in
+		Frame.OnDragAlphaMultiplier     "1.0"     // multiplier applied to alpha while dragging a frame
+		Frame.AutoSnapRange         "6"
+		Frame.UsesAlphaBlending       1
+		FrameSystemButton.Icon        ""
+		FrameSystemButton.DisabledIcon    ""
+
+		Notifications.PanelPosition     "BottomRight"   // Can be "BottomRight", "BottomLeft", "TopRight", "TopLeft"
+		Notifications.PanelPosition     "TopRight" [$OSX]  // the dock is on the bottom for OSX, so instead pop top right like other apps do
+		Notifications.SlideDirection    "None"    // Can be "Vertical", "Horizontal", "None" and controls slide effect
+		Notifications.FadeInTime      "0.45"    // Controls the time it takes to slide/fade into view
+		Notifications.FadeOutTime     "0.25"    // Controls the time it takes to slide/fade out of view
+		Notifications.DisplayTime     "3"     // Controls the length of time at steady state after fade in and before fade out
+		Notifications.StackSize       "1"     // Controls how many panels we will stack before background queuing
+
+		ListPanel.TextColor       Text
+		ListPanel.BgColor       none
+		ListPanel.SelectedTextColor     TextentrySelected
+		ListPanel.SelectedBgColor     TextSelectedBG
+		ListPanel.SelectedOutOfFocusBgColor   ClientBG
+		ListPanel.DisabledTextColor     TextDisabled
+		ListPanel.DisabledSelectedTextColor   ClientBG
+		ListPanel.EmptyListInfoTextColor    Label
+		ListPanel.PerPixelScrolling     1
+		ListPanel.PostSectionLeading	10
+
+		// Default tooltip delay pops fast, but lets the mouse pass through without popping
+		// Anchor=Cursor makes it stick to initial pop location like windows implementation.
+		// Anchor can also be 'Float' to move with the mouse, or 'Parent' to stick just outside
+		// the parent panel (useful for icon sized items)
+		Tooltip.Delay=75
+		Tooltip.Anchor=Cursor
+
+		WizardPanel.HeaderBGColor     HeaderDialog
+
+		Menu.TextInset          "6"
+
+		PropertySheet.TransitionEffectTime    "0"     // time to change from one tab to another
+		PropertySheet.TabGap        -1
+		PropertySheet.FlashTabColor	"Focus2"
+
+		RichText.InsetX         8
+		RichText.InsetY         7
+
+		ScrollBar.Wide          13
+
+		SectionedListPanel.CollapserWidth   16
+
+		HTML.SearchInsetY 5
+		HTML.SearchInsetX 10
+		HTML.SearchWide 348
+		HTML.SearchTall 38
+		HTML.SearchAnimationTime 0.25
+
+		HTML.IMEInsetY 												"5"
+		HTML.IMEInsetX 												"10"
+		HTML.IMEWide 													"348"
+		HTML.IMETall 													"38"
+		HTML.IMEAnimationTime 								"0.25"
+
+		MessageBox.ButtonHeight		24
+	}
+
+	styles
+	{
+		Label {
+			textcolor=label
+			selectedtextcolor=Text
+		}
+
+		Panel {
+			textcolor=Text
+		}
+
+		TextEntry {
+			textcolor=Text
+			selectedtextcolor=AirText255
+			selectedbgcolor=TextSelectedBG
+		}
+
+		RichText {
+			textcolor=Text
+			selectedtextcolor=TextSelected
+		}
+
+		"RichText emphasis" {
+			textcolor=Text
+			selectedtextcolor=Text
+		}
+
+		"RichText url" {
+			textcolor=label
+			selectedtextcolor=label
+		}
+
+		ListPanel {
+			textcolor=text2
+			selectedtextcolor=TextSelected
+		}
+
+		ListPanelColumnHeader {
+			textcolor=label
+		}
+
+		ListPanelSectionHeader {
+			textcolor=label
+		}
+
+		"GameColumn_BigText" {
+			textcolor=Text
+		}
+
+		Button {
+			textcolor=Text
+		}
+
+		ComboBox {
+			textcolor=Text
+			selectedtextcolor=TextEntrySelected
+		}
+
+		RadioButton {
+			textcolor=label
+		}
+
+		CheckButton {
+			textcolor=label
+		}
+
+		PageTab {
+			textcolor=AirText200
+		}
+
+		friends_chat_text {
+			textcolor=Text
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_text_self {
+			textcolor=ChatOwnTextColor
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_history {
+			textcolor=ChatDialog.HistoryColor
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_event {
+			textcolor=Text
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_bright_event {
+			textcolor=Text
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_url {
+			textcolor=Text
+			font-style=underline
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_name_ingame {
+			textcolor=Friends.InGameColor
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_self {
+			textcolor=Friends.OnlineColor
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_name {
+			textcolor=Friends.OnlineColor
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_accountid {
+			textcolor=Text
+			selectedtextcolor=TextentrySelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		friends_chat_securitylink {
+			textcolor=label
+			selectedtextcolor=TextSelected
+			selectedbgcolor=TextSelectedBG
+		}
+
+		//search results empty
+		emptylisttext {
+			textcolor=labeldisabled
+			selectedtextcolor=labeldisabled
+		}
+
+		COverlaySettingsDialog {
+			render_bg {
+				0="fill( x0 + 9, y0 + 54, x1 - 9, y0 + 56, Focus )"
+				1="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+				2="image( x0, y0 + 40, x1, y1, graphics/piston_bg )"
+			}
+		}
+
+		"COverlaySettingsDialog Page" {
+			inset-left=10
+			inset-top=10
+		}
+
+		CServerBrowserDialog {
+			render_bg {
+				0="fill( x0, y0 + 52, x1, y0 + 54, Focus )"
+				1="fill( x0, y1 - 60, x1, y1, AirRibbon )"
+			}
+		}
+
+		CPlayersDialog {
+			render_bg {
+				0="fill( x0 + 9, y0 + 54, x1 - 9, y0 + 56, Focus )"
+				1="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CGamePropertiesDialog {
+			render_bg {
+				0="fill( x0 + 9, y0 + 54, x1 - 9, y0 + 56, Focus )"
+				1="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		HTMLPopup {
+			render_bg { }
+		}
+
+		CEditTagsDialog {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CEditFriendsGroupsDialog {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CSetCustomImageDialog {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CScreenshotManager {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CRegisterCDKeyWizard {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CAddShortcutDialog {
+			render_bg {
+				0="fill( x0, y1 - 68, x1, y1, AirRibbon )"
+			}
+		}
+
+		CBackupWizard {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CManageSecurityWizard {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CChangePasswordWizard {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CChangeContactEmailWizard {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CChooseBetaDialog {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CSetJumplistOptions {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CFriendNotificationOptionsDialog {
+			render_bg {
+				0="fill( x0, y1 - 60, x1, y1, AirRibbon )"
+			}
+		}
+
+		CInstallAppWizard {
+			render_bg {
+				0="fill( x0, y1 - 48, x1, y1, AirRibbon )"
+			}
+		}
+
+		CContentManagmentDialog {
+			render_bg {
+				0="fill( x0, y1 - 56, x1, y1, AirRibbon )"
+			}
+		}
+
+		Button {
+			inset-top=-1
+			render_bg {
+				0="fill( x0, y0 , x1, y1 , AirButton )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		Button:hover {
+			textcolor="AirTextSelected"
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonActive )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		Button:active {
+			textcolor="AirTextSelected"
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonActive )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		Button:disabled	{
+			textcolor="LabelDisabled"
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonDisabled )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		ComboBox {
+			inset="3 -1 0 0"
+			render {
+				0="image ( x1 - 17, y0 + 8, x1, y1, graphics/icon_down_default )"
+			}
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButton )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		ComboBox:hover {
+			textcolor="AirTextSelected"
+			render {
+				0="image ( x1 - 17, y0 + 8, x1, y1, graphics/icon_down_hover )"
+			}
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonActive )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		ComboBox:focus
+		{
+			//textcolor="Text"
+		}
+
+		ComboBox:focus:hover
+		{
+			//textcolor="Text"
+		}
+
+		ToggleButton:selected {
+			textcolor=AirTextSelected
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonActive )"
+				1="fill( x0, y1, x1, y1 + 1, AirDivider )"
+			}
+		}
+
+		//"Hold+Resume" button in normal chat
+		Chat_MenuButton_withChrome {
+			render_bg { }
+		}
+
+		Chat_MenuButton_withChrome:hover {
+			render_bg { }
+		}
+
+		Chat_MenuButton_withChrome:active {
+			render_bg { }
+		}
+
+		Chat_MenuButton_withChrome:disabled {
+			render_bg { }
+		}
+
+		//--------------------From ChatRoomDlgFriend.res--------------------//
+
+		//"End voice chat" button in normal chat
+		controlbutton {
+			render_bg { }
+		}
+
+		controlbutton:hover {
+			render_bg { }
+		}
+
+		controlbutton:active {
+			render_bg { }
+		}
+
+		controlbutton:disabled {
+			render_bg { }
+		}
+
+		//--------------------From gamespage_details_subheader.layout--------------------//
+
+		DetailsButton {
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButton )"
+			}
+		}
+
+		DetailsButton:hover {
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonActive )"
+			}
+		}
+
+		DetailsButton:active {
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirButtonActive )"
+			}
+		}
+
+		DetailsLaunchButton {
+			inset="19 0 0 0"
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_play )"
+			}
+		}
+
+		DetailsLaunchButton:Hover {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_play_hover )"
+			}
+		}
+
+		DetailsLaunchButton:active {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_play_hover )"
+			}
+		}
+
+		DetailsLaunchButton:disabled {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_play )"
+			}
+		}
+
+		DetailsInstallButton {
+			inset="19 0 0 0"
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_install)"
+			}
+		}
+
+		DetailsInstallButton:hover {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_install_hover )"
+			}
+		}
+
+		DetailsInstallButton:active {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_install_hover )"
+			}
+		}
+
+		DetailsBuyButton {
+			inset="19 0 0 0"
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_buy )"
+			}
+		}
+
+		DetailsBuyButton:hover {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_buy_hover )"
+			}
+		}
+
+		DetailsBuyButton:active {
+			render {
+				1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_buy_hover )"
+			}
+		}
+
+		//--------------------From downloadsummarypanel.layout--------------------//
+
+		PauseButton
+					{
+								inset="19 0 0 0"
+								render {
+										1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_pause )"
+								}
+					}
+
+					PauseButton:hover {
+								render {
+										1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_pause_hover )"
+								}
+					}
+
+					PauseButton:active {
+								render {
+										1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_pause_hover )"
+								}
+					}
+
+			ResumeButton {
+				inset="19 0 0 0"
+				render {
+					1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_install )"
+				}
+			}
+
+					ResumeButton:hover {
+								render {
+										1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_install_hover )"
+								}
+					}
+
+		  ResumeButton:active {
+								render {
+										1="image( x0 + 4, y0 + 4, x1, y1, graphics/icon_install_hover )"
+								}
+					}
+
+		 //--------------------From appdownloadpanel.layout--------------------//
+
+		SmRemoveButton {
+			inset="30 0 0 0"
+			render_bg { }
+			render {
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close )"
+			}
+		}
+
+		SmRemoveButton:hover {
+			render_bg { }
+			render {
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close_hover )"
+			}
+		}
+
+		SmRemoveButton:active {
+			render_bg { }
+			render {
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close_hover )"
+			}
+		}
+
+		topOfQueueButton {
+			inset="30 0 0 0"
+			render_bg { }
+			render {
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_topofqueue )"
+			}
+		}
+
+		topOfQueueButton:hover {
+			render_bg { }
+			render {
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_topofqueue_hover )"
+			}
+		}
+
+		topOfQueueButton:active {
+			render_bg { }
+			render {
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_topofqueue_hover )"
+			}
+		}
+
+		//--------------------UPDATE Chat_MenuButton_withChrome in voicebar.res--------------------//
+
+		downarrow {
+			image="graphics/icon_down_default"
+		}
+
+		downarrow:hover {
+			image="graphics/icon_down_hover"
+		}
+
+		uparrow {
+			image="graphics/icon_up_default"
+		}
+
+		uparrow:hover {
+			image="graphics/icon_up_hover"
+		}
+
+		rightarrow {
+			image="graphics/icon_right_default"
+		}
+
+		rightarrow:hover {
+			image="graphics/icon_right_hover"
+		}
+
+		leftarrow {
+			image="graphics/icon_left_default"
+		}
+
+		leftarrow:hover {
+			image="graphics/icon_left_hover"
+		}
+
+		CFriendsListSectionAffordance {
+		//the dropdown menu button on groups
+			inset-left=-6
+			inset-top=1
+		}
+
+		CFriendsListSectionHeader {
+			//!bug, style does not work (can only edit with basic label tag)
+		}
+
+		CheckButton {
+			image=graphics/chkUnselStd
+		}
+
+		CheckButton:hover {
+			image=graphics/chkUnselStd_hover
+		}
+
+		CheckButton:selected {
+			image=graphics/chkSelStd
+		}
+
+		CheckButton:selected:hover {
+			image=graphics/chkSelStd_hover
+		}
+
+		CheckButton:disabled {
+			image=graphics/chkUnselDis
+			textcolor="TextDisabled"
+		}
+
+		CheckButton:selected:disabled {
+			image=graphics/chkSelDis
+			textcolor="TextDisabled"
+			//!! bug - this needs to look disabled
+		}
+
+		ListPanelCheckBox {
+			inset-top=1
+			inset-left=8
+			image=graphics/chkUnselStd
+		}
+
+		ListPanelCheckBox:hover {
+			image=graphics/chkUnselStd_hover
+		}
+
+		ListPanelCheckBox:selected {
+			image=graphics/chkSelStd
+		}
+
+		ListPanelCheckBox:selected:hover {
+			image=graphics/chkSelStd_hover
+		}
+
+		ListPanelCheckBox:disabled {
+			image=graphics/chkUnselDis
+			textcolor="TextDisabled"
+		}
+
+		ListPanelCheckBox:disabled:selected {
+			image=graphics/chkSelDis
+			textcolor="TextDisabled"
+			//!! bug - this needs to look disabled
+		}
+
+		"ListPanelColumnheader ListPanelCheckBox" {
+			inset-top=0
+			inset-left=9
+		}
+
+		RadioButton {
+			image=graphics/RadUnselStd
+		}
+
+		RadioButton:hover {
+			image=graphics/RadUnselStd_hover
+		}
+
+		RadioButton:selected {
+			image=graphics/RadSelStd
+		}
+
+		RadioButton:selected:hover {
+			image=graphics/RadSelStd_hover
+		}
+
+		RadioButtonList {
+			bgcolor=none
+			inset="-2 0 0 0"
+			render_bg { }
+		}
+
+		CheckButtonList { }
+
+		CheckButtonList:scrollbar { }
+
+		"CheckbuttonList Checkbutton" { }
+
+		ComboBoxButton {
+			render_bg { }
+			textcolor=none
+		}
+
+		Divider {
+			bgcolor=none
+			render {
+				0="fill( x0, y0 - 1, x1, y0 + 1, AirDivider )"
+			}
+		}
+
+		Frame {
+			bgcolor=AirNormal
+			render {
+				0="fill( x0, y0, x1, y0 + 1, AirBorder )"
+				1="fill( x0, y1 - 1, x1, y1, AirBorder )"
+				2="fill( x0, y0 + 1, x0 + 1, y1 - 1, AirBorder )"
+				3="fill( x1 - 1, y0 + 1, x1, y1 - 1, AirBorder )"
+			}
+		}
+
+		Frame:FrameFocus {
+			bgcolor=AirNormal
+			render {
+				0="fill( x0, y0, x1, y0 + 1, AirBorder )"
+				1="fill( x0, y1 - 1, x1, y1, AirBorder )"
+				2="fill( x0, y0 + 1, x0 + 1, y1 - 1, AirBorder )"
+				3="fill( x1 - 1, y0 + 1, x1, y1 - 1, AirBorder )"
+			}
+		}
+
+		FrameBRGripPanel {
+			//image=graphics/resizer
+		}
+
+		FrameBRGripPanel:hover {
+			//image=graphics/resizer_over
+		}
+
+		FrameMinimizeButton {
+			render_bg {
+				1="image( x0 - 3, y0 + 3, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		FrameMinimizeButton:hover {
+			render_bg {
+				1="image( x0 - 3, y0 + 3, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		FrameMinimizeButton:active {
+			render_bg {
+				1="image( x0 - 3, y0 + 3, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		FrameMaximizeButton {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/win32_win_max )"
+			}
+		}
+
+		FrameMaximizeButton:hover {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/win32_win_max_hover )"
+			}
+		}
+
+		FrameMaximizeButton:active {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/win32_win_max_hover )"
+			}
+		}
+
+		FrameRestoreButton {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/win32_win_restore )"
+			}
+		}
+
+		FrameRestoreButton:hover {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/win32_win_restore_hover )"
+			}
+		}
+
+		FrameRestoreButton:active {
+			render_bg {
+				1="image( x0, y0, x1, y1, graphics/win32_win_restore_hover )"
+			}
+		}
+
+		FrameCloseButton {
+			render_bg {
+				0="image( x0 + 3, y0 + 3, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		FrameCloseButton:hover {
+			render_bg {
+				1="image( x0 + 3, y0 + 3, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		FrameCloseButton:active {
+			render_bg {
+				1="image( x0 + 3, y0 + 3, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameMinimizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		"CSteamRootDialog FrameMinimizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameMinimizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameMaximizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_max )"
+			}
+		}
+
+		"CSteamRootDialog FrameMaximizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_max_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameMaximizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_max_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameRestoreButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_restore )"
+			}
+		}
+
+		"CSteamRootDialog FrameRestoreButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_restore_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameRestoreButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_restore_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"CSteamRootDialog FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CSteamRootDialog FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		//Removed minimize button from chat window in gameoverlay.styles
+		"ToolWindow FrameMinimizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		"ToolWindow FrameMinimizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"ToolWindow FrameMinimizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"ToolWindow FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"ToolWindow FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"ToolWindow FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"COverlayBroadcastChatDialog FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"COverlayBroadcastChatDialog FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"COverlayBroadcastChatDialog FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CFriendsDialog FrameMinimizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		"CFriendsDialog FrameMinimizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CFriendsDialog FrameMinimizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CFriendsDialog FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"CFriendsDialog FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CFriendsDialog FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CGamesPage_Mini FrameMinimizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		"CGamesPage_Mini FrameMinimizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CGamesPage_Mini FrameMinimizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CGamesPage_Mini FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"CGamesPage_Mini FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CGamesPage_Mini FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+		"HTMLPopup FrameMinimizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		"HTMLPopup FrameMinimizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"HTMLPopup FrameMinimizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"HTMLPopup FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"HTMLPopup FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"HTMLPopup FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CMusicPlayerPanel FrameMinimizeButton" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min )"
+			}
+		}
+
+		"CMusicPlayerPanel FrameMinimizeButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CMusicPlayerPanel FrameMinimizeButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_min_hover )"
+			}
+		}
+
+		"CMusicPlayerPanel FrameCloseButton" {
+			render_bg {
+				0="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close )"
+			}
+		}
+
+		"CMusicPlayerPanel FrameCloseButton:hover" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		"CMusicPlayerPanel FrameCloseButton:active" {
+			render_bg {
+				1="image( x0 + 4, y0 + 9, x1, y1, graphics/win32_win_close_hover )"
+			}
+		}
+
+		ProgressBox {
+			minimum-height=128
+			render {
+				0="fill( x0, y0, x1, y1, AirNormal )"
+				//1="fill( x0 + 132, y0 + 40, x0 + 244, y0 + 88, focus )"
+				2="image( x0 + 132, y0 + 40, x1, y1, graphics/air )"
+
+				3="fill( x0, y0, x1, y0 + 1, AirBorder )"
+				4="fill( x0, y1 - 1, x1, y1, AirBorder )"
+				5="fill( x0, y0 + 1, x0 + 1, y1 - 1, AirBorder )"
+				6="fill( x1 - 1, y0 + 1, x1, y1 - 1, AirBorder )"
+			}
+		}
+
+		"ProgressBox Button" {
+			textcolor=none
+			render_bg { }
+		}
+
+		"ProgressBox FrameCloseButton" {
+			render_bg { }
+		}
+
+		"ProgressBox Label" {
+			textcolor=none
+		}
+
+		FrameTitle {
+			textcolor=none
+		}
+
+		FrameTitle:framefocus {
+			textcolor=none
+		}
+
+		"CFriendsDialog SectionedListPanelInterior" {
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="Focus"
+			shadowtextcolor="TextDisabled"	// the color of disabled line items
+			render_bg { }
+		}
+
+		GraphPanel {
+			textcolor=focus
+			bgcolor=AirBlack
+			inset="3 3 3 3"
+			render_bg { }
+		}
+
+		HTML {
+			bgcolor="AirBlock"
+			inset="2 2 2 2"
+		}
+
+		ListPanel {
+			padding-left=8
+			selectedbgcolor="Focus"
+			shadowtextcolor="TextDisabled"	// the color of disabled line items
+		}
+
+		"CGamesListPanel" { }
+
+		"GameItem_Uninstalled" {
+		  textcolor="labeldisabled"
+		  selectedtextcolor="Text"
+		}
+
+		"GameItem_Uninstalled:hover" {
+			textcolor="label"
+			selectedtextcolor="Text"
+		}
+
+		"GameItem_Installed" {
+			textcolor="Text"
+			selectedtextcolor="AirTextSelected"
+		  }
+
+		"GameItem_Installed:hover" {
+			textcolor="AirText255"
+			selectedtextcolor="AirTextSelected"
+		}
+
+		"GameItem_Shortcut" {
+		  textcolor="Text"
+		  selectedtextcolor="AirTextSelected"
+		  }
+
+		"GameItem_Shortcut:hover" {
+			textcolor="AirText255"
+			selectedtextcolor="AirTextSelected"
+		}
+
+		"GameItem_Mod" {
+		  textcolor="Text"
+		  selectedtextcolor="AirTextSelected"
+		  }
+
+		"GameItem_Mod:hover" {
+			textcolor="AirText255"
+			selectedtextcolor="AirTextSelected"
+		}
+
+		"GameItem_Updating" {
+			textcolor="highlight2"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Updating:hover" {
+			textcolor="highlight1"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Updating:selected" {
+			textcolor="highlight1"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Decrypting" {
+			textcolor="highlight2"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Decrypting:hover" {
+			textcolor="highlight1"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Decrypting:selected" {
+			textcolor="highlight1"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Syncing" {
+			textcolor="highlight2"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Syncing:hover" {
+			textcolor="highlight1"
+			selectedtextcolor="highlight1"
+		}
+
+		"GameItem_Syncing:selected" {
+			textcolor="highlight1"
+			selectedtextcolor="highlight1"
+		}
+
+		ListPanelColumnheader {
+			bgcolor=AirBlock
+			render_bg { }
+		}
+
+		ListPanelColumnHeader:hover {
+			textcolor="labelfocus"
+		}
+
+		"CSteamRootDialog ListPanelColumnheader" {
+			bgcolor=none
+		}
+
+		ListPanelColumnSelectButton {
+			image=graphics/icon_collapse
+		}
+
+		ListPanelColumnSelectButton:hover {
+			image=graphics/icon_collapse_over
+		}
+
+		ListPanelColumnSelectButton:selected {
+			image=graphics/icon_collapse_over
+		}
+
+		ListPanelDragger {
+			bgcolor="none"
+			render {
+				//fill makes dragger visible
+			}
+		}
+
+		ListPanelSectionHeader {
+			padding-left=2
+			padding-bottom=2
+		}
+
+		ListPanelSectionHeader:hover {
+			textcolor=labelfocus
+		}
+
+		ListPanelSectionCollapser {
+			image="graphics/icon_right_default"
+			padding-left=1
+			padding-right=1
+			padding-top=2
+			render_bg { }
+		}
+
+		ListPanelSectionCollapser:hover {
+			image="graphics/icon_right_hover"
+		}
+
+		ListPanelSectionCollapser:selected {
+			padding-left=0
+			padding-right=0
+			padding-top=2
+			image="graphics/icon_down_default"
+		}
+
+		ListPanelSectionCollapser:selected:hover {
+			image="graphics/icon_down_hover"
+		}
+
+		MainNav { }
+
+		Menu {
+			bgcolor=AirMenu
+			inset="0 5 0 5"
+			render {
+				1="fill( x0, y1 - 1, x1, y1, AirMenuBorder )" //btm
+			}
+		}
+
+		SuperNavMenu {
+			bgcolor=AirMenu
+			inset="0 5 0 5"
+			render {
+				1="fill( x0, y1 - 1, x1, y1, AirMenuBorder )" //btm
+			}
+		}
+
+		SuperNavMenuItem { }
+
+		SuperNavMenuDivider { }
+
+		"ComboBox Menu" {
+			render {
+				1="fill( x0, y1 - 1, x1, y1, AirMenuBorder )" //btm
+			}
+		}
+
+		MenuBar {
+			bgcolor=none
+			padding-right=0
+			padding-left=0
+			padding-top=0
+			padding-bottom=0
+		}
+
+		"MenuBar MenuButton" {
+			textcolor=none
+			render_bg {
+				1="image( x0, y0 + 6, x1, y1, graphics/piston )"
+			}
+		}
+
+		MenuButton { }
+
+		MenuItem {
+			textcolor=Text
+			padding-right=3
+			padding-left=3
+			bgcolor=none
+		}
+
+		MenuItem:selected {
+			textcolor="AirTextSelected"
+			bgcolor="focus"
+		}
+
+		MenuItem:hover {
+			textcolor="AirTextSelected"
+			bgcolor="focus"
+		}
+
+		MenuItem:disabled {
+			textcolor="labeldisabled"
+			shadowtextcolor=none
+		}
+
+		MenuItem:disabled:hover {
+			textcolor="labeldisabled"
+			shadowtextcolor=none
+		}
+
+		MenuSeparator {
+			textcolor=none
+			render_bg {
+				0="fill( x0 + 7, y0 + 1, x1 - 7, y0 + 3, AirDivider )"
+			}
+		}
+
+		Notification {
+			bgcolor=none
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirNormal )"
+				//1="fill( x0, y0, x1, y0 + 2, AirDivider )"
+				2="fill( x0, y0 + 74, x1, y1, AirDivider )" //darkened region
+			}
+			render { }
+		}
+
+		Page { }
+
+		PageTab {
+			render_bg { }
+		}
+
+		PageTab:selected {
+			textcolor=AirTextSelected
+			render_bg {
+				0="fill( x0, y0, x1, y1, focus )"
+			}
+		}
+
+		PageTab:hover {
+			textcolor=AirTextSelected
+			render_bg {
+				0="fill( x0, y0, x1, y1, focus2 )"
+			}
+		}
+
+		PageTab:selected:hover {
+			textcolor=AirTextSelected
+			render_bg {
+				0="fill( x0, y0, x1, y1, focus )"
+			}
+		}
+
+		PageTab:Focus {
+			textcolor=AirTextSelected
+		}
+
+		TabCloseButton {
+			render_bg {
+				0="image( x0 + 4, y0 + 6, x1, y1, graphics/tiny_x_default )"
+			}
+		}
+
+		TabCloseButton:hover {
+			render_bg {
+				0="fill( x0 + 1, y0 + 3, x1 - 2, y1, AirLight40 )"
+				1="image( x0 + 4, y0 + 6, x1, y1, graphics/tiny_x_hover )"
+
+			}
+		}
+
+		HotkeyEntryClearButton:hover {
+			render {
+				0="fill( x0, y0 + 1, x1 - 1, y1, AirLight40 )"
+				1="image( x0, y0, x1, y1, resource/icon_clear_field_hover )"
+			}
+		}
+
+		TextEntryClearButton:hover {
+			render {
+				0="fill( x0, y0 + 1, x1 - 1, y1, AirLight40 )"
+				1="image( x0, y0, x1, y1, resource/icon_clear_field_hover )"
+			}
+		}
+
+		ProgressBar {
+			textcolor=focus
+			render_bg {
+				0="fill( x0, y0 - 1, x1, y1 + 1, AirBlack )"
+			}
+		}
+
+		PropertyPage {
+			bgcolor=PropertySheetBG
+		}
+
+		"CFriendsDialog PropertySheet" {
+			//bgcolor=none
+		}
+
+		RichTextInterior {
+			bgcolor=none
+		}
+
+		"RichText url:hover" {
+			textcolor=Texthover
+		}
+
+		ScrollBar
+		{
+			inset-top=0
+			inset-bottom=6
+			inset-left=0
+			inset-right=0
+		}
+
+		ScrollBar.Horizontal
+		{
+			inset-top=0
+			inset-bottom=0
+			inset-left=0
+			inset-right=0
+		}
+
+		ScrollBarButton.up
+		{
+			minimum-height=19
+			image=graphics/icon_up_default
+			render_bg { }
+		}
+
+		ScrollBarButton.up:hover
+		{
+			image=graphics/icon_up_hover
+			render_bg { }
+		}
+
+		ScrollBarButton.down
+		{
+			minimum-height=19
+			inset-top=3
+			image=graphics/icon_down_default
+			render_bg { }
+		}
+
+		ScrollBarButton.down:hover
+		{
+			image=graphics/icon_down_hover
+			render_bg { }
+		}
+
+		ScrollBarButton.left
+		{
+			minimum-width=19
+			image=graphics/icon_left_default
+			render_bg { }
+		}
+
+		ScrollBarButton.left:hover
+		{
+			image=graphics/icon_left_hover
+			render_bg { }
+		}
+
+		ScrollBarButton.right
+		{
+			minimum-width=19
+			image=graphics/icon_right_default
+			render_bg { }
+		}
+
+		ScrollBarButton.right:hover
+		{
+			image=graphics/icon_right_hover
+			render_bg { }
+		}
+
+		ScrollBarHandle
+		{
+			render_bg {
+				0="fill( x0 + 2, y0 + 6, x1 - 2, y1, AirScroll )"
+			}
+		}
+
+		ScrollBarHandle:hover
+		{
+			render_bg {
+				0="fill( x0 + 2, y0 + 6, x1 - 2, y1, AirScrollActive )"
+			}
+		}
+
+		ScrollBarHandle:active
+		{
+			render_bg {
+				0="fill( x0 + 2, y0 + 6, x1 - 2, y1, AirScrollActive )"
+			}
+		}
+
+		SliderHoriz  //horizontal scrollbar thumb
+		{
+			render_bg
+			{
+				0="fill( x0 + 4, y0 + 2, x1 - 4, y1 - 2, AirScroll )"
+				//1="fill( x0 + 3, y0 + 3, x0 + 4, y1 - 3, AirScroll )"
+				//2="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 3, AirScroll )"
+			}
+		}
+
+		SliderHoriz:hover
+		{
+			render_bg
+			{
+				0="fill( x0 + 4, y0 + 2, x1 - 4, y1 - 2, AirScrollActive )"
+				//1="fill( x0 + 3, y0 + 3, x0 + 4, y1 - 3, AirScrollActive )"
+				//2="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 3, AirScrollActive )"
+			}
+		}
+
+		SliderHoriz:active
+		{
+			render_bg
+			{
+				0="fill( x0 + 4, y0 + 2, x1 - 4, y1 - 2, AirScrollActive )"
+				//1="fill( x0 + 3, y0 + 3, x0 + 4, y1 - 3, AirScrollActive )"
+				//2="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 3, AirScrollActive )"
+			}
+		}
+
+		ScrollBarSlider // gutter
+		{
+			bgcolor=none
+			render_bg { }
+		}
+
+		ScrollBarSlider:disabled
+		{
+			bgcolor=none
+			render_bg { }
+		}
+
+		ScrollBarSliderHoriz // gutter
+		{
+			bgcolor=none
+		}
+
+		"ScrollBar SliderHoriz" // gutter
+		{
+			bgcolor=none
+		}
+
+		"CGamesListPanel Scrollbar"
+		{
+			inset-left=-1
+			inset-right=1
+		}
+
+		"CFriendsDialog Scrollbar" //Friends list scroll
+		{
+			inset-bottom=7
+		}
+
+		//--------------------UPDATE Scrollbar in ChatRoomDlg.res--------------------//
+		//--------------------UPDATE Scrollbar in ChatRoomDlgFriend.res--------------------//
+		//--------------------UPDATE Scrollbar in gamespage_mini.layout--------------------//
+		//--------------------UPDATE Scrollbar in steamrootdialog_gamespage_list.layout--------------------//
+
+		SectionedListPanel {
+			bgcolor="none"
+			textcolor="Text"
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="Focus"
+			bgcolor="none"
+			render_bg { }
+			inset="0 0 0 0"
+		}
+
+		"CFriendsDialog SectionedListPanel" {
+		  bgcolor="none"
+		  textcolor="Text"
+		  selectedtextcolor="TextSelected"
+		  selectedbgcolor="Focus"
+		  render_bg { }
+		}
+
+		SectionedlistpanelCollapser {
+			image="graphics/icon_right_default"
+			padding-left=1
+			padding-right=1
+			padding-top=1
+			render_bg { }
+		}
+
+		SectionedListPanelCollapser:hover {
+			image="graphics/icon_right_hover"
+		}
+
+		SectionedListPanelCollapser:selected {
+			padding-left=0
+			padding-right=0
+			padding-top=1
+			image="graphics/icon_down_default"
+		}
+
+		SectionedListPanelCollapser:selected:hover {
+			image="graphics/icon_down_hover"
+		}
+
+		Slider {
+			textcolor="label2"
+			render_bg {
+				0="fill( x0, y0 + 8, x1, y0 + 13, label2 )"
+			}
+		}
+
+		Slider:focus {
+		  textcolor="label2"
+		}
+
+		StatusLabel {
+			textcolor="label"
+		}
+
+		StatusLabel:hover {
+			textcolor="texthover"
+		}
+
+		TextEntry {
+			shadowtextcolor=Text  // this is the cursor color
+			padding-left=8
+			render_bg {
+				0="fill( x0, y0, x1, y0 + 1, AirBlock )"
+				1="fill( x0, y1 - 1, x1, y1, AirBlock )"
+				2="fill( x0, y0, x0 + 1, y1, AirBlock )"
+				3="fill( x1 - 1, y0, x1, y1, AirBlock )"
+			}
+		}
+
+		TextEntry:focus {
+			textcolor=Text
+			render_bg {
+				0="fill( x0, y0, x1, y1, AirBlock )"
+			}
+		}
+
+		TextEntry:disabled {
+			textcolor=TextDisabled
+		}
+
+		// The 'empty' style is used for 'hint text' in text entry fields.
+		// If the text box does not have focus and does not have content, a
+		// hint text property will be shown with this style. This is comment
+		// to pre-fill to box with something like 'Search' that goes away when active
+
+		TextEntry:empty {
+			textcolor=LabelDisabled
+		}
+
+		TextEntryLarge {
+			//for password entry
+			inset-top=-2
+		}
+
+		TextEntryURL {
+			textcolor=Text
+			selectedtextcolor=TextEntrySelected
+			selectedbgcolor=TextSelectedBG
+			shadowtextcolor=Text	// this is the cursor color
+			inset-left=0
+			render_bg { }
+		}
+
+		TextEntryURL:Hover {
+			textcolor="texthover"
+		}
+
+		// the background and frame of a tooltip
+		TooltipWindow {
+			bgcolor=AirMenu
+		}
+
+		// body text inside a tooltip
+		"TooltipWindow Label" {
+			padding-left=4
+			padding-right=4
+			textcolor="Text"
+		}
+
+		// headline text inside a tooltip
+		tooltip_headline {
+			textcolor="TextSelected"
+			padding-left=4
+			padding-top=-1
+			padding-bottom=1
+		}
+
+		TreeNode {
+			bgcolor=none
+			render_bg { }
+		}
+
+		TreeNodeImage {
+			bgcolor=none
+		}
+
+		TreeViewSubPanel {
+			bgcolor=none
+		}
+
+		TreeNodeText {
+			font-family=Arial
+			font-size=13
+			textcolor="Text"
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="TextSelectedBG"
+		}
+
+		TreeView {
+			render_bg { }
+		}
+
+		URLLabel {
+			textcolor="label"
+		}
+
+		URLLabel:Hover {
+			textcolor="texthover"
+		}
+
+		URLLabelSimple {
+			textcolor="labelfocus"
+		}
+
+		URLLabelSimple:Hover {
+			textcolor="AirText255"
+		}
+
+		GameColumnHeaderFavorites {
+			inset-left=1
+			image="steam/cached/fav_remove"
+		}
+
+		CGamesListFavoritesToggle {
+			minimum-width=24
+			inset-left=4
+			image="steam/cached/fav_addTo"
+		}
+
+		CGamesListFavoritesToggle:hover {
+			image="steam/cached/fav_addTo_ovr"
+		}
+
+		CGamesListFavoritesToggle:selected {
+			image="steam/cached/fav_remove"
+		}
+
+		CGamesListFavoritesToggle:selected:hover {
+			image="steam/cached/fav_remove_ovr"
+		}
+
+		WrapPanel { }
+
+		BackButton {
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/icon_button_back"
+		}
+
+		BackButton:hover {
+			render_bg { }
+			image="graphics/icon_button_back_over"
+		}
+
+		BackButton:active {
+			render_bg { }
+			image="graphics/icon_button_back_over"
+		}
+
+		BackButton:disabled {
+			render_bg { }
+			image="graphics/icon_button_back_disabled"
+		}
+
+		ForwardButton {
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/icon_button_forward"
+		}
+
+		ForwardButton:hover {
+			render_bg { }
+			image="graphics/icon_button_forward_over"
+		}
+
+		ForwardButton:active {
+			render_bg { }
+			image="graphics/icon_button_forward_over"
+		}
+
+		ForwardButton:disabled {
+			render_bg { }
+			image="graphics/icon_button_forward_disabled"
+		}
+
+		ReloadButton {
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/icon_button_reload"
+		}
+
+		ReloadButton:hover {
+			render_bg { }
+			image="graphics/icon_button_reload_over"
+		}
+
+		ReloadButton:active {
+			render_bg { }
+			image="graphics/icon_button_reload_over"
+		}
+
+		ReloadButton:disabled {
+			render_bg { }
+			image="graphics/icon_button_reload_disabled"
+		}
+
+		StopButton {
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/icon_button_stop"
+		}
+
+		StopButton:hover {
+			render_bg { }
+			image="graphics/icon_button_stop_over"
+		}
+
+		StopButton:active {
+			render_bg { }
+			image="graphics/icon_button_stop_over"
+		}
+
+		StopButton:disabled {
+			render_bg { }
+			image="graphics/icon_button_stop_disabled"
+		}
+
+		BackButtonSm {
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/icon_button_back"
+		}
+
+		BackButtonSm:hover {
+			render_bg { }
+			image="graphics/icon_button_back_over"
+		}
+
+		BackButtonSm:active {
+			render_bg { }
+			image="graphics/icon_button_back_over"
+		}
+
+		BackButtonSm:disabled {
+			render_bg { }
+			image="graphics/icon_button_back_disabled"
+		}
+
+		ForwardButtonSm {
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/icon_button_forward"
+		}
+
+		ForwardButtonSm:hover {
+			render_bg { }
+			image="graphics/icon_button_forward_over"
+		}
+
+		ForwardButtonSm:active {
+			render_bg { }
+			image="graphics/icon_button_forward_over"
+		}
+
+		ForwardButtonSm:disabled {
+			render_bg { }
+			image="graphics/icon_button_forward_disabled"
+		}
+
+		FullscreenButton { }
+		FullscreenButton:hover { }
+		FullscreenButton:active { }
+		FullscreenButton:disabled { }
+
+		HomeButton { }
+		HomeButton:hover { }
+		HomeButton:active { }
+		HomeButton:disabled { }
+
+		LibrarySearch {
+			textcolor=label
+			minimum-width=268
+			shadowtextcolor="none"  // this is the cursor color
+			render_bg { }
+		}
+
+		LibrarySearch:empty {
+			textcolor=LabelDisabled
+		}
+
+		LibrarySearchIcon {
+			image="graphics/icon_button_search"
+		}
+
+		FriendsSearch {
+			textcolor=label
+			minimum-width=200
+			shadowtextcolor="none"  // this is the cursor color
+			render_bg { }
+		}
+
+		FriendsSearch:empty {
+			textcolor=LabelDisabled
+		}
+
+		FriendsSearchIcon {
+			image="graphics/icon_button_search"
+		}
+
+		gamedetails-headerlabel {
+			textcolor=Text
+		}
+
+		gamedetails-headerlabel-red {
+			textcolor=GameDetailsRed
+		}
+
+		gamedetails-headerlabel-green {
+			textcolor=GameDetailsGreen
+		}
+
+		gamedetails-headerlabel-blue {
+			textcolor=GameDetailsBlue
+		}
+
+		html-findbar {
+			textcolor="text2"
+			bgcolor="AirRibbon"
+			selectedtextcolor="TextEntrySelected"
+			selectedbgcolor="TextSelectedBG"
+			shadowtextcolor="Text"	// this is the cursor color
+		}
+
+		// used in friends tooltip and friends list for overriding regular styles with custom colors
+		friends_offline {
+			textcolor="Friends.OfflineColor"
+		}
+
+		friends_online {
+			textcolor="Friends.OnlineColor"
+		}
+
+		friends_ingame {
+			textcolor="Friends.InGameColor"
+		}
+
+		friends_ignored {
+			textcolor="Friends.IgnoredColor"
+		}
+
+		CConsoleHistory {
+			font-family="Lucida Console"
+			font-family="Menlo" [$OSX]
+			font-size=10
+			font-size=14 [$OSX]
+		}
+
+		"CConsolePage TextEntry" {
+			render_bg {
+				0="fill( x0, y0 - 1, x1, y1 + 1, AirBlock )"
+			}
+		}
+
+		console_text_error {
+			textcolor="Highlight3"
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="TextSelectedBG"
+		}
+
+		console_text {
+			textcolor="Text"
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="TextSelectedBG"
+		}
+	}
+}

@@ -1,0 +1,38 @@
+"resource/layout/downloadspage.layout"
+{
+	controls
+	{
+		// the container
+		"DownloadsPage"
+		{
+			"ControlName"		"CDownloadsPage"
+		}
+	
+		"panel_list"
+		{
+			style=ListPanel
+		}
+	}
+	
+	styles
+	{
+		SectionedListPanelInterior
+		{
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0 + 1, AirDivider )" 
+			}
+		}
+
+		label //listpanel column headers
+		{
+			padding-left=1
+		}
+	}
+
+	layout
+	{
+		region { name=main x=0 y=0 }
+		place { control="downloadsummarypanel,panel_list" dir=down region=main width=max height=max }
+	}
+}

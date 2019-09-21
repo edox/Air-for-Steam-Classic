@@ -1,0 +1,52 @@
+"resource/layout/htmlfindbar.layout"
+{
+	styles
+	{
+		FindEntry
+		{
+			
+		}
+		CloseButtonSm
+		{
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/win32_win_close"
+		}
+		CloseButtonSm:hover
+		{
+			render_bg { }
+			image="graphics/win32_win_close_hover"
+		}
+		NextButtonSm
+		{
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/find_icon_down"
+		}
+		NextButtonSm:hover
+		{
+			render_bg { }
+			image="graphics/find_icon_down_hover"
+		}
+		PrevButtonSm
+		{
+			inset="0 0 0 0"
+			render_bg { }
+			image="graphics/find_icon_up"
+		}
+		PrevButtonSm:hover
+		{
+			render_bg { }
+			image="graphics/find_icon_up_hover"
+		}
+	}
+		
+	layout
+	{
+		place { control="FindEntry" width=178 align=left y=7 margin-right=26 margin-left=100 margin-right=100 }
+		place { control="FindCount" align=right y=7 margin-right=78 margin-left=6 margin-top=4 }
+		place { control="Next,Previous,Close" align=right height=24 width=22 margin-right=5 margin-top=7 }
+		place { control="SearchThisPage" align=left height=22 width=94 margin-left=8 margin-top=8 }
+
+	}
+}

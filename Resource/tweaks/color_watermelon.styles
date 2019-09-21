@@ -1,0 +1,9 @@
+"resource/options/color_red.styles"
+{
+	colors
+	{
+		Focus="207 59 84 255"
+		Focus2="235 96 120 255" //+28 +37 +36
+		Focus3="207 132 145 150" //-35% saturation
+	}
+}

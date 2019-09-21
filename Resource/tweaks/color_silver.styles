@@ -1,0 +1,9 @@
+"resource/options/color_silver.styles"
+{
+	colors
+	{
+		Focus="130 130 130 255"
+		Focus2="158 167 166 255" //+28 +37 +36
+		Focus3="130 130 130 150" //-35% saturation
+	}
+}

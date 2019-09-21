@@ -1,0 +1,9 @@
+"resource/options/color_blue.styles"
+{
+	colors
+	{
+		Focus="0 114 198 255"
+		Focus2="28 151 234 255" //+28 +37 +36
+		Focus3="69 143 198 150" //-35% saturation
+	}
+}

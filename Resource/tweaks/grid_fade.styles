@@ -1,0 +1,10 @@
+"resource/options/grid_fade.styles"
+{
+	styles
+	{
+		GameItem_unInstalled
+		{
+			alpha		100
+		}
+	}
+}

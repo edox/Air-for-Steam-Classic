@@ -1,0 +1,25 @@
+"resource/options/bg_ribbon.styles"
+{
+	styles
+	{
+		CSteamRootDialog
+		{
+			bgcolor=AirNormal
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0 + 36, AirRibbon )"
+				1="fill( x0, y1 - 30, x1, y1, AirRibbon )"
+			}
+		}
+		
+		CGamesPage_Mini 
+		{			
+			bgcolor=AirNormal
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0 + 36, AirRibbon )"
+				1="fill( x0, y1 - 30, x1, y1, AirRibbon )"	
+			}
+		}
+	}
+}

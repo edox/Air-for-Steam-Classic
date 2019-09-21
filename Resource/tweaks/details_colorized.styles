@@ -1,0 +1,29 @@
+"resource/options/details_colorized.styles"
+{
+	styles
+	{
+		rightcolumnheadertext
+		{
+			textcolor=none
+			bgcolor=Focus3
+		}
+		
+		rightcolumnheadertext-red
+		{
+			textcolor=none
+			bgcolor=Focus3
+		}
+
+		rightcolumnheadertext-green
+		{
+			textcolor=none
+			bgcolor=Focus3
+		}
+
+		rightcolumnheadertext-blue
+		{
+			textcolor=none
+			bgcolor=Focus3
+		}
+	}
+}

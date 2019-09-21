@@ -1,0 +1,44 @@
+"resource/layout/overlaydesktop_lores.layout"
+{
+	styles
+	{
+		topbar {
+			font-family=light
+			textcolor=white
+			font-size=150
+		}
+
+		timeStrings {
+			font-family=light
+			textcolor=white
+			font-size=32
+		}
+
+		sidemenu {
+			textcolor=AirOverlayText
+			font-style=uppercase
+		}
+
+		sidemenu:hover {
+			textcolor=white
+		}
+	}
+
+	layout
+	{
+		region { name=row1 width=max y=40 }
+		region { name=row2 width=max y=182 }
+
+		place { control=clock region=row1 align=top-center margin-left=23 }
+		place { control=SessionText region=row2 align=top-center margin-left=2 }
+
+		region { name=bottom width=max height=75 align=bottom }
+
+		place { controls="AchievementsButton,FriendsButton,PlayersButton,GameHubButton,ScreenshotsButton" region=bottom align=top-center spacing=34 }
+
+		place { control=BroadcastDetailPanel align=top-center height=50 width=300 }
+
+		region { name=hidden height=0 width=0 margin-left=-9999 }
+		place { controls="TwoWeeksText,ForeverText,clocksuffix,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,GuidesButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton" region=hidden }
+	}
+}

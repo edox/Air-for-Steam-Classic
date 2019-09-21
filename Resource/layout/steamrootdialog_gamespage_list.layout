@@ -1,0 +1,44 @@
+"resource/layout/steamrootdialog_gamespage_list.layout"
+{
+	controls
+	{
+		"GamesList"
+		{
+			style="GamesList"
+			tabposition=1
+		}
+	}
+
+	styles
+	{
+		RichText //for emptylist
+		{
+			textcolor=labeldisabled
+			selectedtextcolor=labeldisabled
+		}
+
+		"CGamesListPanel URLLabel"
+		{
+			//developer inset, disabled because it causes the metascore/dev name to get cut off
+			//padding-left=4
+		}
+
+		Scrollbar
+		{
+			inset-left=-1
+		}
+	}
+
+	colors
+	{
+		ListPanel.PostSectionLeading	12
+	}
+
+	layout
+	{
+		// content pages
+		place { control="GamesList" width=max height=max }
+
+	}
+
+}

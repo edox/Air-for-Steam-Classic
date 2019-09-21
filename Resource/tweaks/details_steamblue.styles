@@ -1,0 +1,29 @@
+"resource/options/details_steamblue.styles"
+{
+	styles
+	{
+		rightcolumnheadertext
+		{
+			textcolor=none
+			bgcolor=GameDetailsBlueTransparent
+		}
+
+		rightcolumnheadertext-red
+		{
+			textcolor=none
+			bgcolor=GameDetailsBlueTransparent
+		}
+
+		rightcolumnheadertext-green
+		{
+			textcolor=none
+			bgcolor=GameDetailsBlueTransparent
+		}
+
+		rightcolumnheadertext-blue
+		{
+			textcolor=none
+			bgcolor=GameDetailsBlueTransparent
+		}
+	}
+}

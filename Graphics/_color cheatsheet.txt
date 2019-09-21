@@ -1,0 +1,13 @@
+Disabled: 100 100 100 255
+Normal:   200 200 200 255
+Focus:    240 240 240 255
+
+Special-
+inbox_notification: 48 48 48 255 (same as AirNormal)
+
+Checkbox:       80 80 80 255
+Checkbox_hover: 110 110 110 255
+Checkbox_dis:	70 70 70 255
+
+arrow_up(and all):	140 140 140 255
+arrows_hover:	   	170 170 170 255

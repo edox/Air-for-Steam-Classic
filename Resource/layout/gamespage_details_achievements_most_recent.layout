@@ -1,0 +1,72 @@
+"resource/layout/gamespage_details_achievements_most_recent.layout"
+{
+	colors
+	{
+		// ProgressBarMarings must be the combined left+right margin of the actual bar from it's container
+		GameDetailsAchievements.ProgressBarMargins "8"
+
+		Tooltip.Anchor=Parent
+	}
+	styles
+	{
+		mostrecent
+		{
+			minimum-height="130"
+		}
+
+		achievementimagebg
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+      		image="graphics/achievementbg_recent"
+
+		}
+
+		mostrecent_label
+		{
+			textcolor="Text"
+		}
+
+		mostrecent_name
+		{
+			textcolor="Text"
+		}
+
+		mostrecent_unlockedsofar
+		{
+		}
+
+		progressbackground
+		{
+			bgcolor=none
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, AirLight50 )"
+			}
+		}
+
+		progressbarimage
+		{
+			bgcolor=none
+			render
+			{
+				0="fill( x0, y0, x1, y1, focus )"
+			}
+		}
+	}
+
+	layout
+	{
+		region { name=body width=max height=max }
+
+		place { region=body control=mostrecent_label x=82 y=0 width=max }
+		place { region=body control=mostrecent_name x=82 y=18 width=max }
+		place { region=body control=mostrecent_unlockedsofar x=82 y=48 width=max }
+
+		place { region=body control=mostrecent_background x=0 margin-top=0 width=72 height=72 margin-left=0 }
+		place { region=body control=mostrecent_image x=4 y=4 width=64 height=64 }
+
+		place { region=body control=progressbackground y=77 width=max height=32 }
+		place { region=body control=progressbarimage y=81 height=24 margin-left=4 margin-right=4 }
+	}
+}

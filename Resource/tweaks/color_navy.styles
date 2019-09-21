@@ -1,0 +1,9 @@
+"resource/options/color_navy.styles"
+{
+	colors
+	{
+		Focus="48 81 147 255"
+		Focus2="76 118 183 255" //+28 +37 +36
+		Focus3="100 115 147 150" //-35% saturation
+	}
+}

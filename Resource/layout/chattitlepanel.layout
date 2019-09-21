@@ -1,0 +1,37 @@
+"resource/layout/chattitlepanel.layout"
+{
+	controls
+	{
+		"AvatarImage" { ControlName="ImagePanel" }
+		"NameLabel" { ControlName="Label" }
+		"StatusLabel" { ControlName="Label" style="statuslabel" }
+		"LockImage" { ControlName="ImagePanel" }
+		"MenuButton" { ControlName= "CChatTitlePanelAffordance" style="menuButtonStyle"}
+	}
+	
+	styles
+	{
+		menuButtonStyle
+		{
+			image=graphics/gear
+		}
+		
+		menuButtonStyle:hover
+		{
+			image=graphics/gear_hover
+		}
+		
+		statuslabel
+		{
+		}
+	}
+	
+	layout
+	{
+		place { control="MenuButton" height=22 width=22 align=right }
+		
+		//Hidden Items
+		region { name=hidden height=0 width=0 }
+		place {	control="LockImage,NameLabel,AvatarImage,StatusLabel" region=hidden }
+	}
+}

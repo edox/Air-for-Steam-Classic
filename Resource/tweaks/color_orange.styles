@@ -1,0 +1,9 @@
+"resource/options/color_orange.styles"
+{
+	colors
+	{
+		Focus="167 112 48 255"
+		Focus2="195 149 84 255" //+28 +37 +36
+		Focus3="167 139 107 150" //-35% saturation
+	}
+}
