@@ -1,45 +1,42 @@
-"resource/layout/settingssubmusic.layout"
-{
+"Resource/layout/settingssubmusic.layout" {
+
 	styles {
-
-		LibraryListStyle { }
-
-		HeaderText { }
-
-		VolumeSliderStyle	{ bgcolor=none font-family=basefont font-size=16	}
+		ListPanel {
+			bgcolor=A2Ribbon
+			selectedtextcolor=A2TextFocus
+		}
 	}
 
 	layout {
+		region { name=content height=max width=max margin-left=20 margin-right=20 }		
+		
+		place { control=LibraryHeader region=content y=20 }
+		place { control=LibraryList region=content width=max y=40 height=80}
+		
+		place { control=AddLibraryButton,RemoveLibraryButton,StartCrawlingButton region=content y=130 dir=right spacing=10 }
+		place { control=LibraryDivider region=content y=165 width=max }
+		
+		place { control=DatabaseHeader region=content y=175 }
+		place { control=DatabaseCrawlAtStartup region=content y=190 }	
+		place { control=DatabaseCrawlSteamInstallFolders region=content y=190 x=250 }
 
-		region { name="box" width=440 height=max y=0 x=0 }
+		place { control=ResetDatabaseButton,DatabaseInfoLabel region=content y=225 dir=right spacing=10 }
 
-		place { control=LibraryHeader 						region=box dir=down }
-		place { control=LibraryList 							region=box dir=down width=max height=80 start=LibraryHeader margin-top=10 }
-
-		place { control=AddLibraryButton 					region=box dir=down width=130 start=LibraryList margin-top=10 }
-		place { control=RemoveLibraryButton 			region=box dir=right width=130 start=AddLibraryButton margin-left=10 }
-		place { control=StartCrawlingButton 			region=box dir=right width=130 start=RemoveLibraryButton margin-left=10 }
-
-		place { control=LibraryDivider 						region=box dir=down width=max start=AddLibraryButton margin-top=21 }
-
-		place { control=DatabaseInfoLabel 								region=box dir=down start=LibraryDivider margin-top=15 }
-		place { control=DatabaseCrawlAtStartup 						region=box dir=down start=DatabaseInfoLabel margin-top=10 }
-		place { control=DatabaseCrawlSteamInstallFolders 	region=box dir=down start=DatabaseCrawlAtStartup margin-top=-2 }
-		place { control=EnableMediaKeysCheckbox 					region=box dir=down start=DatabaseCrawlSteamInstallFolders margin-top=-2 }
-		place { control=ResetDatabaseButton 							region=box dir=down start=EnableMediaKeysCheckbox width=280 margin-top=10 }
-
-		place { control=DatabaseDivider 					region=box dir=down width=max start=ResetDatabaseButton margin-top=21 }
-
-		place { control=PauseMusicHeader 														region=box dir=down start=DatabaseDivider margin-top=15  }
-		place { control=PauseMusicWhenStartingApplicationCheckbox 	region=box dir=down start=PauseMusicHeader margin-top=5 }
-		place { control=PauseMusicWhenVoiceChatCheckbox 						region=box dir=down start=PauseMusicWhenStartingApplicationCheckbox margin-top=-2 }
-
-		place { control=NotificationHeader 													region=box dir=down start=PauseMusicWhenVoiceChatCheckbox margin-top=20 }
-		place { control=NotificationPlaylistNowPlayingCheckbox 			region=box dir=down start=NotificationHeader margin-top=5 }
-
-		place { control=LoggingHeader 															region=box dir=down x=220 start=DatabaseDivider margin-top=15 }
-		place { control=LoggingCrawlingCheckbox 										region=box dir=down start=LoggingHeader margin-top=5 }
-
-		place { control=DatabaseHeader,VolumeHeader,VolumeSlider,VolumeDivider height=0 width=0 }
+		place { control=DatabaseDivider region=content y=260 width=max }
+		
+		place { control=VolumeHeader region=content y=270 }
+		place { control=VolumeSlider region=content y=290 height=18 width=100 }
+		place { control=EnableMediaKeysCheckbox region=content y=290 x=250 }
+		place { control=VolumeDivider region=content y=320 width=max }
+		
+		place { control=PauseMusicHeader region=content y=330 }
+		place { control=PauseMusicWhenStartingApplicationCheckbox region=content y=345 }
+		place { control=PauseMusicWhenVoiceChatCheckbox region=content y=370 }
+		place { control=AdditionalFilesHeader region=content y=330 x=250 }
+		place { control=AdditionalFilesHighQualityCheckbox region=content y=345 x=250 }
+		place { control=LoggingHeader region=content y=380 x=250}
+		place { control=LoggingCrawlingCheckbox region=content y=395 x=250 }
+		place { control=NotificationHeader region=content y=405 }
+		place { control=NotificationPlaylistNowPlayingCheckbox region=content y=420 }
 	}
 }
