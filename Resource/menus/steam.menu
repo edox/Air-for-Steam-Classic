@@ -8,9 +8,6 @@
 		Away									{	text="#friends_away"										shellcmd="steam://friends/status/away"	checkable=1		autocheck=0 }
 		Invisible							{	text="#friends_invisible"								shellcmd="steam://friends/status/invisible"	checkable=1		autocheck=0 }
 		Divider								{ }
-		GamesDetails					{ text="#steam_menu_games_details"				shellcmd="steam://nav/games/details" }
-		GamesList							{ text="#steam_menu_games_list"						shellcmd="steam://nav/games/list" }
-		GamesGrid							{ text="#steam_menu_games_grid"						shellcmd="steam://nav/games/grid" }
 		MiniMode							{ text="#steam_menu_minimode"							shellcmd="steam://open/minigameslist" }
 		LargeMode							{ text="#steam_menu_largemode"						shellcmd="steam://open/largegameslist" }
 		BigPictureMode				{ text="#steam_menu_bigpicturemode"				shellcmd="steam://open/bigpicture" }
